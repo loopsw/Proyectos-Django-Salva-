@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Listado de anuncios</title>
+  <style>
+    #content{
+        width: 80%;
+        margin:0 auto;
+    }
+    #content h2{
+        margin:10px;
+    }
+
+    #content h1{
+        display:inline;
+        margin: 0 auto;
+        color: red;
+    }
+    #content img{
+        display:block;
+        float:left;
+        height:150px;
+        padding:7px 5px 0px 0px;
+        border-radius:10px;
+    }
+
+    #content p{
+        text-align: justify;
+        justify-content: space-between;
+    }
+    #content strong{
+        display:block;
+        margin-top:1px;
+        text-align: right;
+        font-size:12px;
+        color:gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+      <h1>Lista de anuncios</h1>
+      {% for anuncio in anuncios %}
+        <h2>
+            {{ anuncio.title }}
+        </h2>
+         <img src="{{ anuncio.image.url }}" height="200" alt="{{anuncio.title}}"> 
+         <p>{{ anuncio.content }}</p>
+        <strong>{{anuncio.author}} - creado el {{anuncio.created}}</strong>
+
+      {% endfor %}
+
+    
+  </div>
+</body>
+</html>

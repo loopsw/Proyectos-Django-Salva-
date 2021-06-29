@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página principal</title>
+
+    <style>
+        #content {
+            display: grid;
+            grid-gap: 10px;
+            grid-row: 10% 20% 50%;
+            background-color: aqua;
+            height: 100%;
+        }
+        
+        #content .box {
+            background-color: slateblue;
+        }
+    </style>
+</head>
+
+<body>
+    {% load static %}
+    <h1>Página principal</h1>
+    <h3>Ir a la siguientes direcciones</h3>
+    <ul>
+        <li><a href="{% url 'empresa' %}">Empresa</a></li>
+        <li><a href="{% url 'anuncios' %}">Anuncios</a></li>
+        <li><a href="{% url 'contacto' %}">Contacto</a></li>
+    </ul>
+</body>
+
+</html>

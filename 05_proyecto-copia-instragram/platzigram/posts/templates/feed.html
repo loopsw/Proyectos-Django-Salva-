@@ -1,0 +1,4 @@
+{% for post in posts %}
+<h2>{{ post.name }}</h2>
+<p>Fecha - <i>{{ post.timestamp }}</i></p>
+<img src="{{ post.picture}}"> {% endfor %}

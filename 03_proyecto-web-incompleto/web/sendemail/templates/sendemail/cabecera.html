@@ -1,0 +1,21 @@
+{% load static %}
+<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/fashion.jpg" playsinline autoplay muted loop>
+    <!--source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/fashion.webm" type="video/webm"-->
+    <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm">
+    
+    
+    <source src="http://thenewcode.com/assets/videos/fashion.mp4" type="video/mp4">
+    </video>
+    <header>
+    <h1><a href="#"><img class="logo" src="{% static 'img/logo_pixelblack.png' %}"></a></h1>
+      <nav>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'empresa' %}">Empresa</a>
+        <a href="{% url 'anuncios' %}">Anuncios</a>
+        <a href="{% url 'contacto' %}">Contacto</a>
+      </nav>
+    </header>
+    <div id="fashion">
+      <h2 class="cabecera">Mi web con Django</h2>
+    </div> 
+     

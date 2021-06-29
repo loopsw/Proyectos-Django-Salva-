@@ -1,0 +1,32 @@
+.portfolio h2 {
+    margin-left: 10px;
+}
+
+.portfolio ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.portfolio li {
+    margin: 2px;
+}
+
+.portfolio a {
+    display: block;
+}
+
+.portfolio li img {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 768px;
+    }
+}

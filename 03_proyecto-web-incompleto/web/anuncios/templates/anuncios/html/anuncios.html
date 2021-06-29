@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href="{% static 'css/cabecera.css' %}">
+  <link rel='stylesheet' href="{% static 'css/footer.css' %}">
+  <link rel='stylesheet' href="{% static 'css/base.css' %}">
+    
+  <title>Mi Web en Django</title>
+  <style>
+ 
+  </style>
+
+</head>
+<body>
+  {% include 'cabecera.html' %}
+  <div id="contenedor">
+    <div id="content">
+      <h1>LISTA DE ANUNCIOS</h1>
+      {% block content %}
+      <div  class="anuncio">
+        {% for anuncio in anuncios %}
+        <div class="individual">
+          <h2>{{ anuncio.title }}</h2>
+          <p>
+            <img src="{{ anuncio.image.url }}"  alt="{{anuncio.title}}">
+            <span class="datos">{{ anuncio.created }} || {{ anuncio.author }}</span>
+            {{ anuncio.content| truncatewords:90|linebreaks }}
+          </p>
+          <p>LEER MÁS...</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endblock %}
+    </div>
+
+  </div>
+  {% include 'footer.html' %}
+  <!--h1>Imagen estatica</h1>
+  <img src="{% static 'pepsi.jpg' %}"-->
+</body>
+</html>

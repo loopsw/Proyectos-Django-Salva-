@@ -1,0 +1,16 @@
+{% load static %}
+
+    
+    
+    <header>
+    <h1><a href="#"><img class="logo" src="{% static 'img/logo_pixelblack.png' %}"></a></h1>
+      <nav>
+        <a href="{% url 'home' %}">Inicio</a>
+        <a href="{% url 'empresa' %}">Empresa</a>
+        <a href ="{% url 'anuncios' %}">Anuncios</a>
+        <a href ="{% url 'portfolio' %}">Porfolio</a>
+        <a href="{% url 'contacto' %}">Contacto</a>
+      </nav>
+    </header>
+
+        
